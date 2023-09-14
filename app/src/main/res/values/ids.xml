@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="buttonOpenNavigation" type="id" />
+    <item name="buttonOpenItem" type="id" />
+    <item name="age" type="id" />
+    <item name="locus" type="id" />
+    <item name="street" type="id" />
+    <item name="typeOf" type="id" />
+</resources>

@@ -12,11 +12,17 @@ class ServiceList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_service_list)
 
+        val  cardItems = listOf(
+            CardItem("Rua Fernando Pessoa",2, "5ºC", "Algueirão - Mem Martins", "Dispneia", 23),
+            CardItem("Rua Manuel Francisco Soromenho", 51," 1º", "Loures", "Trauma MI", 59),
+            CardItem("Rua Capitão Salgueiro Maia",13," 2ºEsq", "Tapada das Mercês","Hipertensão",52 )
+        )
+
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val dataList = generateSampleData() // Replace with your actual data
-        val adapter = ServiceListAdapter(dataList) // Create your custom adapter
+        val adapter = ServiceListAdapter(cardItems) // Create your custom adapter
         recyclerView.adapter = adapter
     }
 

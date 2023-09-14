@@ -4,12 +4,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.jppleal.fastresponse.R
+import com.jppleal.fastresponse.ui.service.CardItem
 
-class ServiceListAdapter(private val data: List<String>) :
+class ServiceListAdapter(private val data: List<CardItem>) :
     RecyclerView.Adapter<ServiceListAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val itemText: TextView = itemView.findViewById(R.id.itemText)
+        val itemText: TextView = itemView.findViewById(R.id.typeOf)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -19,7 +20,7 @@ class ServiceListAdapter(private val data: List<String>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = data[position]
-        holder.itemText.text = item
+        holder.itemText.text = item.toString()
     }
 
     override fun getItemCount(): Int {
